@@ -1,1 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>A - EYE</title>
+</head>
+<body>
 
+	<input type="radio" name="page" id="homepage" checked>
+	<input type="radio" name="page" id="camerapage">
+	<input type="radio" name="page" id="readerpage">
+	<input type="radio" name="page" id="settingspage">
+
+<!-- BEGINNING of Home, Camera, Reader, Settings PAGES -->
+<div class="pages">
+
+	<!-- HOME PAGE -->
+	<!-- HOME PAGE -->
+
+	<div class="page home">
+		<header>
+			<div class="logo">
+				<img src="Aeye.png" class="logo" draggable="false" width="80" height="60">
+			</div>
+	
+		</header>
+
+		<div class ="hometext">
+				Home Page
+		</div>
+
+			<div class="box1">
+				<div class="box1content">
+					Welcome to Aperture Eye (A-Eye)<br>
+					Japoy The Great and Chosen One<br>
+					The One and Only Living Legend in Pampanga<br>
+					vs <br>The Honoured one<br>
+					Jerk Ben the Main Character<br>
+				</div>
+			</div>
+
+		<button class="askjapoy">
+			<div class="japoy">
+				Ask Japoy
+			</div>
+		</button>
+
+			<div class="box2">
+				<div class="box2content">
+					Japoy Content idk
+				</div>
+			</div>
+
+	</div>
+
+	<!-- END OF HOME PAGE -->
+	<!-- END OF HOME PAGE -->
+
+
+	<!-- CAMERA PAGE -->
+	<!-- CAMERA PAGE -->
+	<div class="page camera">
+		<header>
+			<div class="logo">
+				<img src="Aeye.png" class="logo" draggable="false" width="80" height="60">
+			</div>
+		</header>
+
+			<div class="cameratext">
+  				Camera Scanner
+			</div>
+
+				<div class="camerasetup">
+					<video id="objcamera" autoplay playsinline></video>
+				</div>
+
+			<div class="scannerbox">
+				<button class="scanbtn">
+   	 				Scan View
+				</button>
+			</div>
+
+	</div>
+
+	<!-- END OF CAMERA PAGE -->
+	<!-- END OF CAMERA PAGE -->
+
+
+	<!-- READER PAGE -->
+	<!-- READER PAGE -->
+	<div class="page reader">
+		<header>
+   			<div class="logo">
+				<img src="Aeye.png" class="logo" draggable="false" width="80" height="60">
+			</div>
+		</header>
+
+			<div class="readertext">
+    			Reader
+			</div>
+
+
+				<div class="docucamera">
+   					<video id="readercamera" autoplay playsinline></video>
+				</div>
+
+			<div class="docuscanbox">
+				<button class="docubtn">
+    				Scan Document Text
+				</button>
+			</div>
+	</div>
+
+	<!-- END OF READER PAGE -->
+	<!-- END OF READER PAGE -->
+
+
+	<!-- SETTINGS PAGE -->
+	<!-- SETTINGS PAGE -->
+	<div class="page settings">
+		<h1>Settings</h1>
+		<p>This is the Settings page.</p>
+	</div>
+
+	<!-- END OF SETTINGS PAGE -->
+	<!-- END OF SETTINGS PAGE -->
+
+
+</div>
+	<!-- END of Home, Camera, Reader, Settings PAGES -->
+	<!-- END of Home, Camera, Reader, Settings PAGES -->
+	<!-- END of Home, Camera, Reader, Settings PAGES -->
+
+
+	<!-- PAA SECTION -->
+	<!-- PAA SECTION -->
+	<footer>
+		<label for="homepage">
+			<img src="homelogo.png" class="footerlogo" height="40" width="40"><br>
+			Home
+		</label>
+
+		<label for="camerapage">
+			<img src="cameralogo.png" class="footerlogo" height="40" width="40"><br>
+			Camera
+		</label>
+
+		<label for="readerpage">
+			<img src="readerlogo.png" class="footerlogo" height="40" width="40"><br>
+			Reader
+		</label>
+
+		<label for="settingspage">
+			<img src="settingslogo.png" class="footerlogo" height="40" width="40"><br>
+			Settings
+		</label>
+
+	</footer>
+	<!-- END OF PAA SECTION -->
+	<!-- END OF PAA SECTION -->
+
+</body>
+</html>
+
+<!-- CSS SECTION -->
+
+<style>
+
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	min-height: 100vh;
+	font-family: Arial, sans-serif;
+	color: whitesmoke;
+	background: #1a1a1a;
+}
+
+header{
+	display: flex;
+	height: 110px;
+	background: #000000;
+	border-bottom: 2px solid #00e5ff;
+	justify-content: space-between;
+	padding: 0 30px;
+	padding-top: 26px;
+	box-shadow: 0 0 20px #00e5ff;
+}
+
+input{
+	display: none;
+}
+
+.page{
+	display: none;
+	text-align: center;	
+}
+
+#homepage:checked ~ .pages .home{
+	display: block;
+}
+
+#camerapage:checked ~ .pages .camera{
+	display: block;
+}
+
+#readerpage:checked ~ .pages .reader{
+	display: block;
+}
+
+#settingspage:checked ~ .pages .settings{
+	display: block;
+}
+
+
+footer{
+	position: fixed;
+	background: black;
+	bottom: 0;
+	left: 0;
+	height: 10%;
+	width: 100%;
+	align-items: center;
+	font-size: 20px;
+	display: flex;
+	box-shadow: 0 0 30px #00e5ff;
+	user-select: none;
+}
+
+footer label{
+	flex: 1;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	color: whitesmoke;
+	font-size: 15px;
+	user-select: none;
+	text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke;
+	transition: 0.5s ease;
+}
+
+footer label .footerlogo{
+	display: block;
+	margin: 0 auto -15px auto;
+	padding: 0;
+}
+
+footer label:hover{
+	transform: scale(1.2);
+}
+
+#homepage:checked ~ .pages ~ footer label[for="homepage"],
+#camerapage:checked ~ .pages ~ footer label[for="camerapage"],
+#readerpage:checked ~ .pages ~ footer label[for="readerpage"],
+#settingspage:checked ~ .pages ~ footer label[for="settingspage"]{
+	color: yellow;
+}
+
+.logo{
+	padding-left: 16px;
+	user-select: none;
+}
+
+.hometext{
+	margin-top: 25px;
+	width: 100%;
+	padding: 7px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	text-align: center;
+	user-select: none;
+	text-shadow: 0 0 30px whitesmoke;
+}
+
+.box1{
+	padding-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 220px;
+	width: 80%;
+	max-width: 1200px;
+	margin: 25px auto 0;
+	background: #0b132b;
+	border: 2px solid #00e5ff;
+	border-radius: 20px;
+	box-shadow: 0 0 20px #00e5ff;
+	cursor: pointer;
+	transition: 0.3s ease;
+	user-select: none;
+}
+
+.box1content{
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+	text-shadow: 0 0 5px whitesmoke;
+	user-select: none;
+}
+
+.askjapoy{
+	background: #ffd000;
+	border: 1px solid black;
+	height: 130px;
+	width: 130px;
+	margin: 25px auto 0;
+	border-radius: 50%;
+	box-shadow: 0 0 20px lightgrey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+
+.japoy{
+	color: black;
+	font-weight: bold;
+	font-size: 22px;
+	text-shadow: 0 0 2px black;
+}
+
+.box2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 120px;
+	width: 40%;
+	max-width: 900px;
+	margin: 25px auto 0;
+	background: #0b132b;
+	border: 2px solid #00e5ff;
+	border-radius: 20px;
+	box-shadow: 0 0 20px #00e5ff;
+	cursor: pointer;
+	transition: 0.3s ease;
+	user-select: none;
+}
+
+.box2content{
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+	text-shadow: 0 0 5px whitesmoke;
+	user-select: none;
+}
+
+.box1:hover{
+	transform: scale(1.03);
+}
+
+.askjapoy:hover{
+	transform: scale(1.1);
+}
+
+
+.cameratext{
+    margin-top: 25px;
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0 0 30px whitesmoke;
+    user-select: none;
+}
+
+.camerasetup{
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    height: 500px;
+    margin: 20px auto 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #00e5ff;
+    background: #000000;
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+#objcamera{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.scannerbox{
+    background: #ffd000;
+    border: 2px solid black;
+    height: 130px;
+    width: 130px;
+    margin: 10px auto 0;
+    border-radius: 50%;
+    box-shadow: 0 0 50px lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    user-select: none;
+}
+
+.scanbtn{
+    border: none;
+    background: none;
+    color: black;	
+    font-size: 22px;
+    text-shadow: 0 0 2px black;
+    user-select: none;
+}
+
+.scannerbox:hover{
+    transform: scale(1.10);
+}
+
+
+.readertext{
+    margin-top: 25px;
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0 0 30px whitesmoke;
+    user-select: none;
+}
+
+.docucamera{
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    height: 500px;
+    margin: 20px auto 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #00e5ff;
+    background: #000000;
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+#readercamera{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.docuscanbox{
+    background: #ffd000;
+    border: 2px solid black;
+    height: 130px;
+    width: 130px;
+    margin: 10px auto 0;
+    border-radius: 50%;
+    box-shadow: 0 0 50px lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    user-select: none;
+}
+
+.docubtn{
+    border: none;
+    background: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    text-shadow: 0 0 2px black;
+    user-select: none;
+}
+
+.docuscanbox:hover{
+    transform: scale(1.10);
+}
+</style>
+
+	<!-- END OF CSS SECTION -->
+
+
+
+<script>
+
+const cameraPage = document.getElementById("camerapage");
+const cameraVideo = document.getElementById("objcamera");
+
+cameraPage.addEventListener("change", function() {
+
+    if (cameraPage.checked) {
+
+        navigator.mediaDevices.getUserMedia({
+            video: {
+                facingMode: "environment"
+            },
+            audio: false
+        })
+
+        .then(function(stream) {
+            cameraVideo.srcObject = stream;
+        })
+
+        .catch(function(error) {
+            console.log("Camera error:", error);
+        });
+
+    }
+
+});
+
+
+const readerPage = document.getElementById("readerpage");
+const readerVideo = document.getElementById("readercamera");
+
+readerPage.addEventListener("change", function() {
+
+    if (readerPage.checked) {
+
+        navigator.mediaDevices.getUserMedia({
+            video: {
+                facingMode: "environment"
+            },
+            audio: false
+        })
+
+        .then(function(stream) {
+            readerVideo.srcObject = stream;
+        })
+
+        .catch(function(error) {
+            console.log("Reader camera error:", error);
+        });
+
+    }
+
+});
+
+</script>
